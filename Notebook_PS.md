@@ -80,6 +80,58 @@ The purpose of this notebook is to keep track of and organize the information th
 
 ### Page 1: 2016-07-24. VACC server use notes
 
+
+
+When submitting **single jobs** you have to use the following script: (call it: myjob.script)   
+
+```
+# This job needs 1 compute node with 1 processor per node.
+PBS -l nodes=1:ppn=1
+# It should be allowed to run for up to 1 hour.
+PBS -l walltime=01:00:00
+# Name of job.
+PBS -N myjob
+# Join STDERR TO STDOUT.  (omit this if you want separate STDOUT AND STDERR)
+PBS -j oe   
+# Send me mail on job start, job end and if job aborts
+PBS -M hlachanc@uvm.edu
+PBS -m bea
+
+cd $HOME/myjob
+echo "This is myjob running on " `hostname`
+myprogram -foo 1 -bar 2 -baz 3
+
+```
+
+
+
+Submit the job by running:   
+
+```
+qsub myjob.script
+```
+
+ 
+
+When submitting jobs that require **more memory** (more than 1.5gb) use this script:   
+
+```
+# This job is a single process that needs 8gb of physical memory and 9gb of virtual memory
+# (it can push 1GB into swap/paging space.)
+PBS -l nodes=1:ppn=1,pmem=8gb,pvmem=9gb
+# It should be allowed to run for up to 1 hour.
+PBS -l walltime=01:00:00
+# Name of job.
+PBS -N mybigmemjob
+# Join STDERR TO STDOUT.  (omit this if you want separate STDOUT AND STDERR)
+PBS -j oe   
+# Send me mail on job start, job end and if job aborts
+PBS -M hlachanc@uvm.edu
+PBS -m bea
+```
+
+
+
 ------
 
 <div id='id-section2'/> 
