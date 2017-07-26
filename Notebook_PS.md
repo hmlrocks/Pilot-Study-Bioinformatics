@@ -149,15 +149,71 @@ PBS -m bea
 3. Agree to the terms and click "Request VPN access"   
 4. Access should be granted (via email I believe) within one business day.    
 
-   
 
 A VPN allows you to access the serves when not connected to a UVM network. (will allow me to work down at the lab or off campus)
+
+
+
+I was granted access within an hour!  Next steps:
+
+1. download the cisco "AnyConnect Secure Mobility Client" by following the steps provided from the link in the email.
+2. once eveything is downloaded to use your VPN you:
+   1. open the  "AnyConnect Secure Mobility Client" program.
+   2. it will list "sslvpn.uvm.edu" and give you the option to click "connect"
+   3. once you click "connect" it will ask you to log in (use your UVM net id and password)
+   4. then you should be good to go!
+
+
 
 ------
 
 <div id='id-section3'/> 
 
-### Page 3:    
+### Page 3: 2017-07-26. Moving programs from PBIO381 server to VACC server    
+
+
+
+***Based on email instructions form Melissa Pespeni***
+
+Email from Melissa:
+
+1. Login to your home directory on the VACC server, make a programs directory,
+2. Open another terminal window and log onto the pbio381 server and cd into the /data/popgen/ directory
+3. You can scp whichever or all directories in there that you want with something like:
+
+```
+scp -r samtools_1.4 hlachance@vacc.server.edu:/hl/programs/
+```
+
+the "-r" tells it to copy a directory
+
+4. Then you can symlink each program to /usr/local/bin - at least that's what we've done on the pbio server to "add things to the PATH" so the computer can find the program when you call.  But I'm not sure if/how this will work on the VACC server.  You may need to ask them or ask Aayudh how he has done it!
+
+
+
+Steps I took:
+
+1. log onto VACC server (bluemoon-user1.uvm.edu)
+2. make sure you are in the home directory then create a directory called "programs"
+
+```
+cd ~/
+mkdir programs
+ll
+```
+
+3. Open another terminal window (PUTTY) and log onto "pbio381.uvm.edu" and cd to where the programs are stored:
+
+```
+cd /data/popgen
+ll
+```
+
+4. Open WinSCP and log into both servers (log into one server then open a new tab by clicking the "+" tab and log into the second server)
+5. move the programs from the pbio381 directory onto my computer's desktop (temporarily) then go to the tab with the bluemoon-user1 sever and move the programs from my desktop into the "programs" folder. 
+
+
+
 ------
 
 <div id='id-section4'/> 
