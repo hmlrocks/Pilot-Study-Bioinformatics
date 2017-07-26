@@ -13,7 +13,7 @@ The purpose of this notebook is to keep track of and organize the information th
 
 ### Table of contents for 60 entries (Format is *Page: Date(with year-month-day). Title*)        
 * [Page 1: 2017-07-24](#id-section1). VACC server use notes
-* [Page 2: 2017-01-19](#id-section2). 
+* [Page 2: 2017-07-26](#id-section2). Setting up remote access to UVM network
 * [Page 3: 2017-02-01](#id-section3). 
 * [Page 4: 2017-02-06](#id-section4). 
 * [Page 5: 2017-02-08](#id-section5). 
@@ -78,7 +78,7 @@ The purpose of this notebook is to keep track of and organize the information th
 
 <div id='id-section1'/> 
 
-### Page 1: 2016-07-24. VACC server use notes
+### Page 1: 2017-07-24. VACC server use notes
 
 
 
@@ -136,7 +136,23 @@ PBS -m bea
 
 <div id='id-section2'/> 
 
-### Page 2: 
+### Page 2: 2017-07-26. Setting up remote access to UVM network 
+
+
+
+***Based on notes from meeting with RESNR IT personal Seth O'Brien***   
+
+
+
+1. Go to www.uvm.edu/it/network   
+2. Click "request VPN Access" in the bottom right column   
+3. Agree to the terms and click "Request VPN access"   
+4. Access should be granted (via email I believe) within one business day.    
+
+   
+
+A VPN allows you to access the serves when not connected to a UVM network. (will allow me to work down at the lab or off campus)
+
 ------
 
 <div id='id-section3'/> 
