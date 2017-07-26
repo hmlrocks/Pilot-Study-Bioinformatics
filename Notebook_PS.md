@@ -14,7 +14,7 @@ The purpose of this notebook is to keep track of and organize the information th
 ### Table of contents for 60 entries (Format is *Page: Date(with year-month-day). Title*)        
 * [Page 1: 2017-07-24](#id-section1). VACC server use notes
 * [Page 2: 2017-07-26](#id-section2). Setting up remote access to UVM network
-* [Page 3: 2017-02-01](#id-section3). 
+* [Page 3: 2017-07-26](#id-section3). Moving programs from PBIO381 server to VACC server
 * [Page 4: 2017-02-06](#id-section4). 
 * [Page 5: 2017-02-08](#id-section5). 
 * [Page 6: 2017-02-13](#id-section6). 
@@ -152,6 +152,10 @@ PBS -m bea
 
 A VPN allows you to access the serves when not connected to a UVM network. (will allow me to work down at the lab or off campus)
 
+   
+
+   
+
 
 
 I was granted access within an hour!  Next steps:
@@ -162,7 +166,6 @@ I was granted access within an hour!  Next steps:
    2. it will list "sslvpn.uvm.edu" and give you the option to click "connect"
    3. once you click "connect" it will ask you to log in (use your UVM net id and password)
    4. then you should be good to go!
-
 
 
 ------
@@ -187,7 +190,13 @@ scp -r samtools_1.4 hlachance@vacc.server.edu:/hl/programs/
 
 the "-r" tells it to copy a directory
 
-4. Then you can symlink each program to /usr/local/bin - at least that's what we've done on the pbio server to "add things to the PATH" so the computer can find the program when you call.  But I'm not sure if/how this will work on the VACC server.  You may need to ask them or ask Aayudh how he has done it!
+4. Then you can symlink each program to /usr/local/bin - at least that's what we've done on the pbio server to "add things to the PATH" so the computer can find the program when you call.  But I'm not sure if/how this will work on the VACC server.  You may need to ask them or ask Aayudh how he has done it!   
+
+
+   
+
+   
+
 
 
 
@@ -211,7 +220,7 @@ ll
 
 4. Open WinSCP and log into both servers (log into one server then open a new tab by clicking the "+" tab and log into the second server)
 5. move the programs from the pbio381 directory onto my computer's desktop (temporarily) then go to the tab with the bluemoon-user1 sever and move the programs from my desktop into the "programs" folder. 
-
+6. ​
 
 
 ------
