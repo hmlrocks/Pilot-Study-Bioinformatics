@@ -15,7 +15,7 @@ The purpose of this notebook is to keep track of and organize the information th
 * [Page 1: 2017-07-24](#id-section1). VACC server use notes
 * [Page 2: 2017-07-26](#id-section2). Setting up remote access to UVM network
 * [Page 3: 2017-07-26](#id-section3). Moving programs from PBIO381 server to VACC server
-* [Page 4: 2017-02-06](#id-section4). 
+* [Page 4: 2017-07-27](#id-section4). Creating Symlinks for programs
 * [Page 5: 2017-02-08](#id-section5). 
 * [Page 6: 2017-02-13](#id-section6). 
 * [Page 7: 2017-02-15](#id-section7). 
@@ -220,14 +220,109 @@ ll
 
 4. Open WinSCP and log into both servers (log into one server then open a new tab by clicking the "+" tab and log into the second server)
 5. move the programs from the pbio381 directory onto my computer's desktop (temporarily) then go to the tab with the bluemoon-user1 sever and move the programs from my desktop into the "programs" folder. 
-6. ​
 
 
 ------
 
 <div id='id-section4'/> 
 
-### Page 4:   
+### Page 4: 2017-07-27. Creating Symlinks for programs   
+
+
+
+I attempted to create symlinks to each program using the following commands.  Each command was run from the programs folder:
+
+
+
+symlink to bwa:
+
+```
+ln -s ~/programs/bwa/bwa "bwa"
+```
+
+ symlink to bowtie:
+
+```
+ln -s ~/programs/bowtie/bowtie "bowtie"
+```
+
+symlink to fastqc:
+
+```
+ln -s ~/programs/fastqc/fastqc "fastqc"
+```
+
+symlink to blastp:
+
+```
+ln -s ~/programs/ncbi-blast/blastp "blastp"
+```
+
+symlink to blastn:
+
+```
+ln -s ~/programs/ncbi-blast/blastn "blastn"
+```
+
+symlink to blastx:
+
+```
+ln -s ~/programs/ncbi-blast/blastx "blastx"
+```
+
+
+
+symlink to samtools:
+
+```
+ln -s ~/programs/samtools-1.4/samtools "samtools"
+```
+
+symlink to Trimmomatic:
+
+```
+ln -s ~/programs/Trimmomatic-0.33/trimmomatic-0.33.jar "trimmomatic"
+```
+
+symlink to trinity:
+
+```
+ln -s ~/programs/trinityrnaseq-Trinity-v2.4.0/Trinity "trinity"
+```
+
+
+
+Oops: actually I ran the commands when I was in "Trimmomatic-0.33" so now I have to go delete them and re-run the commands while in a new directory which I will create and call "symlinks":
+
+
+
+Make Directory and enter in the folder:
+
+```
+mkdir symlinks
+```
+
+Deleted symlinks in "Trimmomatic-0.33" using **WinSCP**
+
+
+
+Re-run symlink commands while in "symlinks" folder:
+
+```
+ln -s ~/programs/bwa/bwa "bwa"
+ln -s ~/programs/bowtie/bowtie "bowtie"
+ln -s ~/programs/fastqc/fastqc "fastqc"
+ln -s ~/programs/ncbi-blast/blastp "blastp"
+ln -s ~/programs/ncbi-blast/blastn "blastn"
+ln -s ~/programs/ncbi-blast/blastx "blastx"
+ln -s ~/programs/samtools-1.4/samtools "samtools"
+ln -s ~/programs/Trimmomatic-0.33/trimmomatic-0.33.jar "trimmomatic"
+ln -s ~/programs/trinityrnaseq-Trinity-v2.4.0/Trinity "trinity"
+
+```
+
+
+
 ------
 
 <div id='id-section5'/> 
