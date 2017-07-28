@@ -318,7 +318,6 @@ ln -s ~/programs/ncbi-blast/blastx "blastx"
 ln -s ~/programs/samtools-1.4/samtools "samtools"
 ln -s ~/programs/Trimmomatic-0.33/trimmomatic-0.33.jar "trimmomatic"
 ln -s ~/programs/trinityrnaseq-Trinity-v2.4.0/Trinity "trinity"
-
 ```
 
 
@@ -327,7 +326,45 @@ ln -s ~/programs/trinityrnaseq-Trinity-v2.4.0/Trinity "trinity"
 
 <div id='id-section5'/> 
 
-### Page 5: 
+### Page 5: 2017-07-28. Make programs executable  
+
+
+
+The program files were not showing up green which means they were not executable.  Following Melissa's suggestion I used the following commands on each program to make then executable.
+
+
+
+```
+cd ~/programs/bwa
+chmod u+x bwa
+ll
+cd ~/programs/bowtie
+chmod u+x bowtie
+ll
+cd ~/programs/fastqc
+chmod u+x fastqc
+ll
+cd ~/programs/ncbi-blast
+chmod u+x blastp
+ll
+cd ~/programs/ncbi-blast
+chmod u+x blastn
+ll
+cd ~/programs/ncbi-blast
+chmod u+x blastx
+ll
+cd ~/programs/samtools-1.4
+chmod u+x samtools
+ll
+cd ~/programs/Trimmomatic-0.33
+chmod u+x trimmomatic-0.33.jar
+ll
+cd ~/programs/trinityrnaseq-Trinity-v2.4.0
+chmod u+x Trinity
+ll
+```
+
+They all turned green after the above commands were run.  Still hard to tell if they will work.  When I typed just the program name no list of commands popped up like I was told they would...
 
 ------
 
